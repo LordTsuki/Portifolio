@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            On bgChange
+        </title>
+        <script>
+            function caixaAlta()
+            {
+                var x = document.getElementById("nome")
+                x.value = x.value.toUpperCase();
+
+                var maior = document.getElementById("maiuscula")
+                maior.innerHTML = x.value.toUpperCase();
+
+                var menor = document.getElementById("minuscula")
+                menor.innerHTML = x.value.toLowerCase();
+            }
+        </script>
+    </head>
+    <body>
+        Insira seu nome:
+        <input type="text" id="nome" onchange="caixaAlta()">
+
+        <h2 id="maiuscula"></h2>
+        <h2 id="minuscula"></h2>
+    </body>
+</html>

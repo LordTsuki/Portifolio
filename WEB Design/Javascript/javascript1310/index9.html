@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=auto, initial-scale=1.0">
+    <title>
+        Eventos do Mouse
+    </title>
+</head>
+<body>
+
+    <button onmouseover=mOver(this) onmouseout=mOut(this)> Passei com o mouse!!!</button>
+    <br><br>
+    <button onmousedown=mDown(this) onmouseup=mUp(this)>Clicando com o mouse!!!</button>
+
+    <script>
+        function mOver(obj)
+        {
+            obj.innerHTML = "Obrigado - Entrei!!!";
+        }
+
+        function mOut(obj)
+        {
+            obj.innerHTML = "Passei o mouse e SAI!!!";
+        }
+
+        function mUp(obj)
+        {
+            obj.style.backgroundColor = "#0000FF";
+            obj.innerHTML = "Soltei o clique do mouse";
+        }
+
+        function mDown(obj)
+        {
+            obj.style.backgroundColor = "#FF0000";
+            obj.innerHTML = "Cliquei com o mouse";
+        }
+
+    </script>
+    
+</body>
+</html>

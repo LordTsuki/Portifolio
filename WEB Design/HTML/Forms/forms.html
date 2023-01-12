@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="envia_dados1.php" method="GET">
+        <input type="button" value="Clique Aqui!" onclick="msg()">
+        <br><br>
+        <input type="checkbox" name="veiculo1" value="Bicicleta">Eu tenho uma Bicicleta <br>
+        <input type="checkbox" name="veiculo2" value="Carro">Eu tenho um Carro <br>
+        <input type="checkbox" name="veiculo3" value="Moto">Eu tenho uma moto <br>
+        <br><br>
+        Selecione sua cor favorita: <input type="color" name="corfavorita" value="#0000ff">
+        <br><br>
+        Data de nascimento: <input type="date" name="dataNascimento">
+        <br><br>
+        Data de nascimento 2: <input type="datetime-local" name="dataNascimento2">
+        <br><br>
+        Digite seu email: <input type="email" name="e-mail" placeholder="Digite seu email" id="">
+        <br><br>
+        <input type="file" name="arquivoUnico" id=""><br><br>
+        <input type="file" name="arquivoMultiplo" id="" multiple>
+        <br><br>
+        Nome: <input type="text" name="primeiroNome" id=""><br>
+        Sobrenome: <input type="text" name="ultimoNome" id=""><br><br>
+        Senha: <input type="password" name="senha" placeholder="Digite sua senha" id=""><br><br>
+        <input type="image" src="seta.png" alt="submit" width="100px"><br><br>
+        Mês e Ano: <input type="month" name="mesano" id=""><br><br>
+        Nota (0-10): <input type="number" name="nota" id="" min="0" max="10"> <br><br>
+        Qual sua faixa etária?: <br>
+        <input type="radio" name="idade" value="18-22" id="">18-22<br>
+        <input type="radio" name="idade" value="23-30" id="">23-30<br>
+        <input type="radio" name="idade1" value="30-50" id="">30-50<br>
+        <input type="radio" name="idade1" value="50+" id="">50+<br><br><br>
+        Insatisfeito
+        <input type="range" name="satisfacao" min="0" max="100" id="">
+        Satisfeito <br><br>
+        <input type="reset" value="Redefinir"><br><br>
+        <textarea name="" id="" cols="30" rows="10">
+            Meu texto é grande
+        </textarea>
+    </form>
+    <script>
+        function msg(){
+            alert("Você ganhou 5 mil reais!!");
+        }
+    </script>
+
+    <br><br><br><br><br><br>
+    <form action="envia_dados.php" method="GET">
+        Nome:
+        <input type="name" name="nome" placeholder="Digite seu nome: ">
+        <br>
+        e-mail:
+        <input type="email" name="name" placeholder="Digite seu email: ">
+        <br>
+        <input type="submit" name="Enviar" value="Enviar Informações">
+    </form>
+</body>
+</html>

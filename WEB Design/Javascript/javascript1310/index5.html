@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Meus testes com getElementByClassName</h1>
+
+    <p class="par">Texto 1 a ser exibido!!!</p>
+    <p class="par">Texto 2 a ser exibido!!!</p>
+
+    <script>
+        console.log(document.getElementsByClassName("par"));
+        var qtdParagrafos = document.getElementsByClassName("par");
+
+        qtdParagrafos[0].innerHTML = "Mudei o primeiro paragrafo";
+
+        alert("Total de Paragrafos: " + qtdParagrafos.length);
+
+    </script>
+
+</body>
+</html>

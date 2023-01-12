@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Mistério da Lâmpada</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <button id="idLigar" onmouseenter="Ligar()" > Ligar</button>
+    <input  id="idDesligar" type="button" value="Desligar">
+    <button id="idMostrar">Mostrar </button>
+    <button id="idEsconder">Esconder </button>
+    <button id="idTrocar">Trocar </button>
+    <button id="idPiscar" onclick="Piscar()">Piscar </button>
+    <br>
+    <img id= "imagem" src ="luzDesligada.gif">
+
+    <script>
+
+        function Piscar()
+        {
+            setInterval(Desligar, 75)
+            setInterval(Ligar, 75)              
+        }
+
+        document.getElementById("idMostrar").addEventListener("click", function(){
+            document.getElementById("imagem").style.display = "block"
+        } )
+
+        document.getElementById("idEsconder").addEventListener("click", function(){
+            document.getElementById("imagem").style.display = "none"
+            //$("#imagem").css("display","none");
+
+        } )
+
+        document.getElementById("idTrocar").addEventListener("mousemove", function(){
+            var i= document.getElementById("imagem");
+                 // i.src.match("luzDesligada.gif")
+            if (i.getAttribute("src") == "luzDesligada.gif" )
+                Ligar() 
+               // document.getElementById("imagem").src="luzLigada.gif"
+            else
+                document.getElementById("imagem").src="luzDesligada.gif"
+                //Desligar()
+
+        })
+
+        document.getElementById("idDesligar").addEventListener("mouseover", Desligar)
+        document.getElementById("idDesligar").addEventListener("click", Desligar)
+
+        function Desligar()
+        {
+            document.getElementById("imagem").src="luzDesligada.gif"
+        }
+
+        function Ligar()
+        {
+            //document.querySelector("img")  
+            //document.getElementById("imagem").src="luzLigada.gif"
+            var imag= document.getElementById("imagem");
+            imag.src= "luzLigada.gif"
+
+
+        }
+
+    </script>
+</body>
+</html>
+
+
