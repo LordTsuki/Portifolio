@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="author" content = "Lord 月青, Folena, Conris, Rage, Kote">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Caça Níqueis Computação (SLOTS)</title>
+		<link rel="stylesheet" href="/CacaNiquel/style.css">
+		
+		
+		<script>
+			var credito = 0;
+			var aux = 0;
+			var aposta = 1;
+			var nSort = 0;
+			var slot1, slot2, slot3, slot4;
+			
+			function aleatorio(inferior,superior){ //randomizador
+				numPossibilidades = superior - inferior; 
+				aleat = Math.random() * numPossibilidades;
+				aleat = Math.floor(aleat);
+				return parseInt(inferior) + aleat;
+			}
+			
+			function diminuir_aposta() { //diminui o valor da aposta em 1
+				if (aposta > 1) {
+					aposta--;
+					document.getElementById('aposta').value = 'R$ ' + aposta;					
+				}
+			}
+			
+			function aumentar_aposta() { //aumenta o valor da aposta em 1
+				if (aposta < 50) {
+					aposta ++;
+					document.getElementById('aposta').value = 'R$ ' + aposta;
+				}
+			}
+			
+			function verificaPremio() { //verifica se ganhou algum prémio
+				
+				//inicio dos prêmios menores
+				if (slot1 == 1 && slot2 == 2 && slot3 == 3 && slot4 == 4){
+					aposta = parseInt(aposta);
+					credito = credito + (aposta * 2);
+					document.getElementById('credito').value = 'R$ ' + credito;
+					window.alert("Parabéns, você ganhou " + aposta * 2 + " créditos!!");
+				}
+
+				if (slot1 == 1 && slot2 == 2 && slot3 == 4 && slot4 == 3){
+					aposta = parseInt(aposta);
+					credito = credito + (aposta * 2);
+					document.getElementById('credito').value = 'R$ ' + credito;
+					window.alert("Parabéns, você ganhou " + aposta * 2 + " créditos!!");
+				}
+				
+				if (slot1 == 1 && slot2 == 3 && slot3 == 2 && slot4 == 4){
+					aposta = parseInt(aposta);
+					credito = credito + (aposta * 2);
+					document.getElementById('credito').value = 'R$ ' + credito;
+					window.alert("Parabéns, você ganhou " + aposta * 2 + " créditos!!");
+				}
+				
+				if (slot1 == 1 && slot2 == 3 && slot3 == 4 && slot4 == 2){
+					aposta = parseInt(aposta);
+					credito = credito + (aposta * 2);
+					document.getElementById('credito').value = 'R$ ' + credito;
+					window.alert("Parabéns, você ganhou " + aposta * 2 + " créditos!!");
+				}
+				
+				if (slot1 == 1 && slot2 == 4 && slot3 == 2 && slot4 == 3){
+					aposta = parseInt(aposta);
+					credito = credito + (aposta * 2);
+					document.getElementById('credito').value = 'R$ ' + credito;
+					window.alert("Parabéns, você ganhou " + aposta * 2 + " créditos!!");
+				}
+				
+				if (slot1 == 1 && slot2 == 4 && slot3 == 3 && slot4 == 2){
+					aposta = parseInt(aposta);
+					credito = credito + (aposta * 2);
+					document.getElementById('credito').value = 'R$ ' + credito;
+					window.alert("Parabéns, você ganhou " + aposta * 2 + " créditos!!");
+				}
+				
+				if (slot1 == 2 && slot2 == 1 && slot3 == 3 && slot4 == 4){
+					aposta = parseInt(aposta);
+					credito = credito + (aposta * 2);
+					document.getElementById('credito').value = 'R$ ' + credito;
+					window.alert("Parabéns, você ganhou " + aposta * 2 + " créditos!!");
+				}
+
+				if (slot1 == 2 && slot2 == 1 && slot3 == 4 && slot4 == 3){
+					aposta = parseInt(aposta);
+					credito = credito + (aposta * 2);
+					document.getElementById('credito').value = 'R$ ' + credito;
+					window.alert("Parabéns, você ganhou " + aposta * 2 + " créditos!!");
+				}
+				
+				if (slot1 == 2 && slot2 == 3 && slot3 == 1 && slot4 == 4){
+					aposta = parseInt(aposta);
+					credito = credito + (aposta * 2);
+					document.getElementById('credito').value = 'R$ ' + credito;
+					window.alert("Parabéns, você ganhou " + aposta * 2 + " créditos!!");
+				}
+				
+				if (slot1 == 2 && slot2 == 3 && slot3 == 4 && slot4 == 1){
+					aposta = parseInt(aposta);
+					credito = credito + (aposta * 2);
+					document.getElementById('credito').value = 'R$ ' + credito;
+					window.alert("Parabéns, você ganhou " + aposta * 2 + " créditos!!");
+				}
+				
+				if (slot1 == 2 && slot2 == 4 && slot3 == 1 && slot4 == 3){
+					aposta = parseInt(aposta);
+					credito = credito + (aposta * 2);
+					document.getElementById('credito').value = 'R$ ' + credito;
+					window.alert("Parabéns, você ganhou " + aposta * 2 + " créditos!!");
+				}
+				
+				if (slot1 == 2 && slot2 == 4 && slot3 == 3 && slot4 == 1){
+					aposta = parseInt(aposta);
+					credito = credito + (aposta * 2);
+					document.getElementById('credito').value = 'R$ ' + credito;
+					window.alert("Parabéns, você ganhou " + aposta * 2 + " créditos!!");
+				}
+					
+				if (slot1 == 3 && slot2 == 2 && slot3 == 1 && slot4 == 4){
+					aposta = parseInt(aposta);
+					credito = credito + (aposta * 2);
+					document.getElementById('credito').value = 'R$ ' + credito;
+					window.alert("Parabéns, você ganhou " + aposta * 2 + " créditos!!");
+				}
+
+				if (slot1 == 3 && slot2 == 2 && slot3 == 4 && slot4 == 1){
+					aposta = parseInt(aposta);
+					credito = credito + (aposta * 2);
+					document.getElementById('credito').value = 'R$ ' + credito;
+					window.alert("Parabéns, você ganhou " + aposta * 2 + " créditos!!");
+				}
+				
+				if (slot1 == 3 && slot2 == 1 && slot3 == 2 && slot4 == 4){
+					aposta = parseInt(aposta);
+					credito = credito + (aposta * 2);
+					document.getElementById('credito').value = 'R$ ' + credito;
+					window.alert("Parabéns, você ganhou " + aposta * 2 + " créditos!!");
+				}
+				
+				if (slot1 == 3 && slot2 == 1 && slot3 == 4 && slot4 == 2){
+					aposta = parseInt(aposta);
+					credito = credito + (aposta * 2);
+					document.getElementById('credito').value = 'R$ ' + credito;
+					window.alert("Parabéns, você ganhou " + aposta * 2 + " créditos!!");
+				}
+				
+				if (slot1 == 3 && slot2 == 4 && slot3 == 2 && slot4 == 1){
+					aposta = parseInt(aposta);
+					credito = credito + (aposta * 2);
+					document.getElementById('credito').value = 'R$ ' + credito;
+					window.alert("Parabéns, você ganhou " + aposta * 2 + " créditos!!");
+				}
+				
+				if (slot1 == 3 && slot2 == 4 && slot3 == 1 && slot4 == 2){
+					aposta = parseInt(aposta);
+					credito = credito + (aposta * 2);
+					document.getElementById('credito').value = 'R$ ' + credito;
+					window.alert("Parabéns, você ganhou " + aposta * 2 + " créditos!!");
+				}
+
+				if (slot1 == 4 && slot2 == 2 && slot3 == 3 && slot4 == 1){
+					aposta = parseInt(aposta);
+					credito = credito + (aposta * 2);
+					document.getElementById('credito').value = 'R$ ' + credito;
+					window.alert("Parabéns, você ganhou " + aposta * 2 + " créditos!!");
+				}
+
+				if (slot1 == 4 && slot2 == 2 && slot3 == 1 && slot4 == 3){
+					aposta = parseInt(aposta);
+					credito = credito + (aposta * 2);
+					document.getElementById('credito').value = 'R$ ' + credito;
+					window.alert("Parabéns, você ganhou " + aposta * 2 + " créditos!!");
+				}
+				
+				if (slot1 == 4 && slot2 == 3 && slot3 == 2 && slot4 == 1){
+					aposta = parseInt(aposta);
+					credito = credito + (aposta * 2);
+					document.getElementById('credito').value = 'R$ ' + credito;
+					window.alert("Parabéns, você ganhou " + aposta * 2 + " créditos!!");
+				}
+				
+				if (slot1 == 4 && slot2 == 3 && slot3 == 1 && slot4 == 2){
+					aposta = parseInt(aposta);
+					credito = credito + (aposta * 2);
+					document.getElementById('credito').value = 'R$ ' + credito;
+					window.alert("Parabéns, você ganhou " + aposta * 2 + " créditos!!");
+				}
+				
+				if (slot1 == 4 && slot2 == 1 && slot3 == 2 && slot4 == 3){
+					aposta = parseInt(aposta);
+					credito = credito + (aposta * 2);
+					document.getElementById('credito').value = 'R$ ' + credito;
+					window.alert("Parabéns, você ganhou " + aposta * 2 + " créditos!!");
+				}
+				
+				if (slot1 == 4 && slot2 == 1 && slot3 == 3 && slot4 == 2){
+					aposta = parseInt(aposta);
+					credito = credito + (aposta * 2);
+					document.getElementById('credito').value = 'R$ ' + credito;
+					window.alert("Parabéns, você ganhou " + aposta * 2 + " créditos!!");
+				}
+				//fim dos prêmios menores
+				
+				//inicio dos prêmios maiores
+				if (slot1 == 1 && slot2 == 1 && slot3 == 1 && slot4 == 1){
+					aposta = parseInt(aposta);
+					credito = credito + (aposta * 5);
+					document.getElementById('credito').value = 'R$ ' + credito;
+					window.alert("Parabéns, você ganhou " + aposta * 5 + " créditos!!");
+				}
+				
+				if (slot1 == 2 && slot2 == 2 && slot3 == 2 && slot4 == 2){
+					aposta = parseInt(aposta);
+					credito = credito + (aposta * 10);
+					document.getElementById('credito').value = 'R$ ' + credito;
+					window.alert("Parabéns, você ganhou " + aposta * 10 + " créditos!!");
+				}
+				
+				if (slot1 == 3 && slot2 == 3 && slot3 == 3 && slot4 == 3){
+					aposta = parseInt(aposta);
+					credito = credito + (aposta * 20);
+					document.getElementById('credito').value = 'R$ ' + credito;
+					window.alert("Parabéns, você ganhou " + aposta * 20 + " créditos!!");
+				}
+				
+				if (slot1 == 4 && slot2 == 4 && slot3 == 4 && slot4 == 4){
+					aposta = parseInt(aposta);
+					credito = credito + (aposta * 50);
+					document.getElementById('credito').value = 'R$ ' + credito;
+					window.alert("Parabéns, você ganhou " + aposta * 50 + " créditos!!");
+				}
+				//fim dos prêmios maiores
+			}
+			
+			function colocar_credito() //adiciona creditos ao contador
+			{
+				aux = window.prompt("Adicione créditos:");
+					aux = parseInt(aux);
+					credito = parseInt(credito);
+					credito = credito + aux;
+					document.getElementById('credito').value = 'R$ ' + credito
+			}
+			
+			function iniciar_aposta() { //inicia a rolagem do caça-niquel
+					if(credito > 0 && credito >= aposta){
+						credito = credito - aposta;
+						document.getElementById('credito').value = 'R$ ' + credito;
+						document.getElementById('laranja').src = '/CacaNiquel/img/roleta.gif';
+						document.getElementById('uva').src = '/CacaNiquel/img/roleta.gif';
+						document.getElementById('cereja').src = '/CacaNiquel/img/roleta.gif';
+						document.getElementById('sete').src = '/CacaNiquel/img/roleta.gif';
+						
+						//processamento do slot1
+						nSort = aleatorio(1,5);
+						switch (nSort) {
+							case 1:
+							count=setTimeout("document.getElementById('laranja').src = '/CacaNiquel/img/laranja1.png'", 4000);
+							slot1 = 1;
+							break;
+							case 2:
+							count=setTimeout("document.getElementById('laranja').src = '/CacaNiquel/img/uva1.png'", 4000);
+							slot1 = 2;
+							break;
+							case 3:
+							count=setTimeout("document.getElementById('laranja').src = '/CacaNiquel/img/cereja1.png'", 4000);
+							slot1 = 3;
+							break;
+							case 4:
+							count=setTimeout("document.getElementById('laranja').src = '/CacaNiquel/img/sete1.png'", 4000);
+							slot1 = 4;
+							break;
+						}
+						
+						//processamento do slot2
+						nSort = aleatorio(1,5);
+						switch (nSort) {
+							case 1:
+							count=setTimeout("document.getElementById('uva').src = '/CacaNiquel/img/laranja1.png'", 5000);
+							slot2 = 1;
+							break;
+							case 2:
+							count=setTimeout("document.getElementById('uva').src = '/CacaNiquel/img/uva1.png'", 5000);
+							slot2 = 2;
+							break;
+							case 3:
+							count=setTimeout("document.getElementById('uva').src = '/CacaNiquel/img/cereja1.png'", 5000);
+							slot2 = 3;
+							break;
+							case 4:
+							count=setTimeout("document.getElementById('uva').src = '/CacaNiquel/img/sete1.png'", 5000);
+							slot2 = 4;
+							break;
+						}
+						
+						//processamento do slot3
+						nSort = aleatorio(1,5);
+						switch (nSort) {
+							case 1:
+							count=setTimeout("document.getElementById('cereja').src = '/CacaNiquel/img/laranja1.png'", 6000);
+							slot3 = 1;
+							break;
+							case 2:
+							count=setTimeout("document.getElementById('cereja').src = '/CacaNiquel/img/uva1.png'", 6000);
+							slot3 = 2;
+							break;
+							case 3:
+							count=setTimeout("document.getElementById('cereja').src = '/CacaNiquel/img/cereja1.png'", 6000);
+							slot3 = 3;
+							break;
+							case 4:
+							count=setTimeout("document.getElementById('cereja').src = '/CacaNiquel/img/sete1.png'", 6000);
+							slot3 = 4;
+							break;
+						}
+						
+						//processamento do slot4
+						nSort = aleatorio(1,5);
+						switch (nSort) {
+							case 1:
+							count=setTimeout("document.getElementById('sete').src = '/CacaNiquel/img/laranja1.png'", 7000);
+							slot4 = 1;
+							break;
+							case 2:
+							count=setTimeout("document.getElementById('sete').src = '/CacaNiquel/img/uva1.png'", 7000);
+							slot4 = 2;
+							break;
+							case 3:
+							count=setTimeout("document.getElementById('sete').src = '/CacaNiquel/img/cereja1.png'", 7000);
+							slot4 = 3;
+							break;
+							case 4:
+							count=setTimeout("document.getElementById('sete').src = '/CacaNiquel/img/sete1.png'", 7000);
+							slot4 = 4;
+							break;
+						}
+						count=setTimeout("verificaPremio()", 10000);
+					}
+				}
+		</script>
+	</head>
+	
+	<body>
+	
+		<div id = "corpo">
+		
+			<div id = "creditos_txt">
+				Créditos
+			</div>
+			
+			<div id = "creditos">
+				<form>
+					<input id = "credito" type = "text" size = "5" value = "R$ 0" readonly />
+				</form>
+			</div>
+			
+			<div id = "valor_txt">
+				Valor da Aposta
+			</div>
+			
+			<div id = "valor">
+				<form>
+					<input id = "aposta" type = "text" size = "1" value = "R$ 1" readonly />
+				</form>
+			</div>
+			
+			<div id = "tela">
+				<div id = "slot1">
+					<img id = "laranja" src = "/CacaNiquel/img/laranja1.png" />
+				</div>
+				<div id = "slot2">
+					<img id = "uva" src = "/CacaNiquel/img/uva1.png" />
+				</div>
+				<div id = "slot3">
+					<img id = "cereja" src = "/CacaNiquel/img/cereja1.png" />
+				</div>
+				<div id = "slot4">
+					<img id = "sete" src = "/CacaNiquel/img/sete1.png" />
+				</div>
+			</div>
+			
+			<div id = "botoes">
+				<img src = "/CacaNiquel/img/diminuir_aposta.gif" onMouseDown="this.src='/CacaNiquel/img/diminuir_aposta_1.gif';" onMouseUp="this.src='/CacaNiquel/img/diminuir_aposta.gif';" onclick = "diminuir_aposta();" />
+				<img src = "/CacaNiquel/img/iniciar_aposta.gif" onMouseDown="this.src='/CacaNiquel/img/iniciar_aposta_1.gif';" onMouseUp="this.src='/CacaNiquel/img/iniciar_aposta.gif';" onclick = "iniciar_aposta();"/>
+				<img src = "/CacaNiquel/img/aumentar_aposta.gif" onMouseDown="this.src='/CacaNiquel/img/aumentar_aposta_1.gif';" onMouseUp="this.src='/CacaNiquel/img/aumentar_aposta.gif';" onclick = "aumentar_aposta();"/>
+				<img src = "/CacaNiquel/img/botao.gif" onmousedown="this.src='/CacaNiquel/img/botao_apertado.gif';" onmouseup="this.src='/CacaNiquel/img/botao.gif';" onclick="colocar_credito();"/>
+			</div>
+			
+			<div id = "rodapé">
+				<a href = "/CacaNiquel/tabela.html">
+					<img src="/CacaNiquel/img/premios.png">
+				</a>
+			</div>
+
+		</div>
+	
+	</body>
+
+</html>
