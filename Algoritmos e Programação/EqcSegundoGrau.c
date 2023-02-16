@@ -74,6 +74,5 @@ int main()
             exit(1);
 
         }
-
         printf("Espaco alocado com sucesso! End= %u\n",*p);
     }
